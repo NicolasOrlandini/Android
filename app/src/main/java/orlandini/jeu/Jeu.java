@@ -132,9 +132,9 @@ public class Jeu extends View {
      * @param canvas canvas
      */
     protected void afficherInfosJeu(Canvas canvas) {
-        String topScore = MainActivity._scoreDataBase.getTopScore();
+        //String topScore = MainActivity._scoreDataBase.getTopScore();
         canvas.drawText("Score : " + String.valueOf(score), 50, 50, paint);
-        canvas.drawText("Meilleur score : " + String.valueOf(topScore), 50, 120, paint);
+        //canvas.drawText("Meilleur score : " + String.valueOf(topScore), 50, 120, paint);
         canvas.drawBitmap(bitmapTemps, screenWidth - 300, 0, null);
         canvas.drawText(String.valueOf(GameActivity.getSecs()), screenWidth - 160, 80, paint);
     }

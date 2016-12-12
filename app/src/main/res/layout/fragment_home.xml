@@ -63,5 +63,13 @@
         android:background="@drawable/ripple_effect"
         />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/homeLogo"
+        android:layout_alignEnd="@+id/btnBonus"
+        android:id="@+id/buttonRepo"
+        android:text="Click me"/>
+
 
 </RelativeLayout>

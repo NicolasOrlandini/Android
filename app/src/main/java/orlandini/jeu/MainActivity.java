@@ -22,14 +22,24 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.List;
+
+import io.realm.Realm;
 import orlandini.jeu.Fragments.AProposFragment;
 import orlandini.jeu.Fragments.HelpDialogFragment;
 import orlandini.jeu.Fragments.HomeFragment;
 import orlandini.jeu.Leaderboard.LeaderboardFragment;
 import orlandini.jeu.Fragments.SettingFragment;
+import retrofit.Call;
+import retrofit.Callback;
+import retrofit.GsonConverterFactory;
+import retrofit.Response;
+import retrofit.Retrofit;
 
 /**
  * Activité principale, contient le navigation drawer
@@ -64,6 +74,7 @@ public class MainActivity extends AppCompatActivity{
 
     //variables static (pour la BDD)
     public static ScoreDataBase _scoreDataBase;
+    public static Realm _realm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,6 +87,8 @@ public class MainActivity extends AppCompatActivity{
 
         //instanciation de la base de données
         _scoreDataBase = new ScoreDataBase(getBaseContext());
+        _realm.init(this);
+        _realm = Realm.getDefaultInstance();
 
         //changement de couleur pour la toolbar
         toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -230,6 +243,21 @@ public class MainActivity extends AppCompatActivity{
                 afficherAide();
                 break;
             case R.id.deleteScores:
+                _scoreDataBase.deleteAllScore();
+                Class leaderboardClass = LeaderboardFragment.class;
+                try {
+                    this.finish();
+                    final Intent intent = this.getIntent();
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | IntentCompat.FLAG_ACTIVITY_CLEAR_TASK);
+                    this.startActivity(intent);
+                    getSupportFragmentManager().beginTransaction().add(R.id.main_Content, new LeaderboardFragment(), "un tag").commit();
+                    Toast.makeText(getBaseContext(), "Score(s) réinitialisé(s)", Toast.LENGTH_LONG).show();
+
+                    return true;
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                Toast.makeText(getApplicationContext(), "Score(s) réinitialisé(s)", Toast.LENGTH_LONG).show();
                 reinitialiserLeaderboard();
                 break;
             default:

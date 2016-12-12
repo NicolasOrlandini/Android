@@ -26,7 +26,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import io.realm.Realm;
 import orlandini.jeu.Fragments.FatalityDialogFragment;
+import orlandini.jeu.Models.Score;
 
 /**
  * Cette activité gère l'affichage de la durée d'une partie,
@@ -75,7 +77,6 @@ public class GameActivity extends AppCompatActivity{
         GameActivity.condition = condition;
     }
     private static int condition = 1;
-
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
@@ -382,16 +383,26 @@ public class GameActivity extends AppCompatActivity{
      * Compte à rebours pendant le jeu
      */
     public class MyCount extends CountDownTimer {
+
+        Score monScore = new Score();
+        int id = 1;
+
         private MyCount(long millisInFuture, long countDownInterval) {
             super(millisInFuture, countDownInterval);
         }
         // Executé lorsque le temps de jeu est écoulé (timer à zero)
         @Override
         public void onFinish() {
+            MainActivity._realm.beginTransaction();
             //Ajouter le score dans la base de données
             switch (condition) {
                 case 1:
-                    scoreDB.addScore(GameCustomView.getScore());
+                    //scoreDB.addScore(GameCustomView.getScore());
+                    Score realmScore = MainActivity._realm.createObject(Score.class, monScore.getId());
+                    realmScore.setScore(GameCustomView.getScore());
+                    MainActivity._realm.copyToRealmOrUpdate(realmScore);
+                    MainActivity._realm.commitTransaction();
+                    id++;
                     break;
                 case 2:
                     scoreDB.addScore(EasterEggCustomView.getScore());
@@ -403,6 +414,7 @@ public class GameActivity extends AppCompatActivity{
             FatalityDialogFragment newFragment = new FatalityDialogFragment();
             newFragment.show(fm, "Fragment_fatality_dialog");
 
+            MainActivity._realm.close();
             // Réinitialisation du jeu
             reinitialiserJeu();
         }
