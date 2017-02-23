@@ -1,11 +1,17 @@
 # Projet Samaritan
 
-Le projet présenté est une application de jeu, réalisé à l'aide du langage Android, consistant à tapoter sur un personnage un certain nombre de fois, en un lapse de temps défini par l'utilisateur. Dans le but de marquer le plus de points possibles.
-Le jeu peut être personnalisé, notamment en terme d'image, mais aussi de sons lorsque l'on perd, gagne ou au démarrage de l'application.
-Il y a la possibilité de regarder ses scores dans un tableau de score, nommé Leaderboard, dans le menu se situant à gauche.
+Projet Samaritan en Java LPSIL DAM - 2016
 
-Vous pouvez nous donner vos retours, si jamais vous constatez un problème ici :
-"mettre une adresse mail bidon".
+version 1.0.3
+
+-----------------
+
+
+## Description
+
+Le projet présenté est une application de jeu, réalisé en natif Android (Java), consistant à tapoter sur un personnage le plus de fois possible dans un lapse de temps défini. Dans le but de marquer le plus de points possibles.
+Le jeu peut être personnalisé, notamment le personnage, mais aussi les sons lorsque l'on perd, gagne ou encore lorsque l'on tapote sur le personnage.
+Il est possible de visualiser ses scores dans un tableau de score, nommé Leaderboard, dans le hamburger menu se situant à gauche.
 
 ## Informations
 
@@ -19,9 +25,8 @@ Vous pouvez nous donner vos retours, si jamais vous constatez un problème ici :
 * de nouvelles fonctionnalités sont en cours de développement, elles sont stockées dans les issues, afin de nous en servir de to do et de garder une trace de ce que nous voulons faire par la suite.
 
 -----------------
------------------
 
-#Étapes de développement
+## Étapes de développement
 
 Le projet a été conçu à l'aide de la méthode Agile, qui nous permet de voir l'évolution de chaque fonctionnalité au cours du développement.
 
@@ -61,5 +66,16 @@ Le projet a été conçu à l'aide de la méthode Agile, qui nous permet de voir
 * [x] Sortie de la version 1.0
 * [x] Ajout de commentaires explicatifs finaux
 
+## Contributeurs
 
-<p style="text-align:right";>Nicolas ORLANDINI et Valentin LEON</p>
+#### Nicolas ORLANDINI
+#### Valentin LEON
+
+## Contact
+
+Vous pouvez nous donner vos retours, si jamais vous constatez un problème ou une amélioration possible, merci de nous contacter à l'adresse suivante :
+##### nicolas.orlandini@outlook.fr
+
+-----------------
+
+© Nicolas ORLANDINI & Valentin Leon
