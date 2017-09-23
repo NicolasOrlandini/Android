@@ -26,6 +26,14 @@ Le projet Samaritan est un jeu réalisé en natif Android (Java) dans le cadre d
   - Le thème de l'application (Orange Halloween ou bleu)
 * de nouvelles fonctionnalités sont en cours de développement
 
+![page accueil](/images/home.png "Page d'accueil du jeu")
+![commencer jeu](/images/commencer.png "Pré lancement du jeu")
+![jeu](/images/jeu.png "Jeu en cours")
+![fin du jeu](/images/fin.png "Fin du jeu et affichage du score")
+![aide](/images/help.png "Aide")
+![leaderboard](/images/leaderboard.png "Tableau des scores")
+![settings](/images/params.png "Paramètres du jeu")
+
 ## Points techniques
 
 - Fragments et activités
