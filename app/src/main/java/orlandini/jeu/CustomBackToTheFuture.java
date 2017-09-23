@@ -15,7 +15,7 @@ import android.widget.TextView;
  * Classe de customisation de font
  */
 
-public class CustomBackToTheFuture extends TextView {
+public class CustomBackToTheFuture extends android.support.v7.widget.AppCompatTextView {
     public CustomBackToTheFuture(Context context, AttributeSet attrs) {
         super(context, attrs);
 
@@ -24,7 +24,7 @@ public class CustomBackToTheFuture extends TextView {
         }
 
         TypedArray styledAttrs = context.obtainStyledAttributes(attrs, R.styleable.CustomBackToTheFuture);
-        String fontName = styledAttrs.getString(R.styleable.CustomBackToTheFuture_font);
+        String fontName = "CustomBackToTheFuture";
         styledAttrs.recycle();
 
         setTypeFace(fontName);

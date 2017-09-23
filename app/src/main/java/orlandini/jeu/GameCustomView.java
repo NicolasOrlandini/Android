@@ -25,7 +25,7 @@ import java.util.Random;
  * @version 2016.0.44
  *
  * Date de création : 09/10/2016
- * Dernière modification : 04/11/2016
+ * Dernière modification : 07/09/2017
  */
 
 public class GameCustomView extends Jeu implements View.OnTouchListener {
@@ -123,12 +123,20 @@ public class GameCustomView extends Jeu implements View.OnTouchListener {
                     if ( x >= mFileX && x <= mFileX + IMAGE_SIZE && y >= mFileY
                             && y <= mFileY + IMAGE_SIZE) {
 
-                        if (prefs.getBoolean("switch_sons", true))
+                        if (prefs.getBoolean("switch_sons", true)) {
+                            if (mMediaPlayer != null) {
+                                mMediaPlayer.release();
+                                mMediaPlayer = null;
+                            }
+                            parametrerSonPerso();
                             mMediaPlayer.start();
+                        }
+
                         if (prefs.getBoolean("switch_vibreur", true))
                             vibrator.vibrate(100);
                         setVisibility(View.VISIBLE);
                         score++;
+                        update();
                         invalidate();
                     }
                 }

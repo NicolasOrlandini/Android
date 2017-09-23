@@ -38,7 +38,7 @@ import orlandini.jeu.Fragments.FatalityDialogFragment;
  * @version 2016.0.46
  *
  * Date de création : 09/10/2016
- * Dernière modification : 04/11/2016
+ * Dernière modification : 07/09/2017
  */
 
 public class GameActivity extends AppCompatActivity{

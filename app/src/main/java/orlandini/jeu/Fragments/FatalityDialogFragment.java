@@ -23,7 +23,7 @@ import orlandini.jeu.R;
  * @version 2016.0.39
  *
  * Date de création : 09/10/2016
- * Dernière modification : 29/10/2016
+ * Dernière modification : 07/09/2017
  */
 
 public class FatalityDialogFragment extends DialogFragment {
@@ -38,9 +38,12 @@ public class FatalityDialogFragment extends DialogFragment {
         mMediaPlayerFatality.start();
         mMediaPlayerRejouer = MediaPlayer.create(this.getContext(), R.raw.excellent);
 
+        Dialog dialog = super.onCreateDialog(savedInstanceState);
+        dialog.setCanceledOnTouchOutside(true);
+        dialog.setTitle(R.string.dialog_fatality);
+
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-        builder.setTitle(R.string.dialog_fatality)
-                .setPositiveButton(R.string.fire, new DialogInterface.OnClickListener() {
+        builder.setPositiveButton(R.string.fire, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         mMediaPlayerRejouer.start();
                     }
@@ -59,12 +62,10 @@ public class FatalityDialogFragment extends DialogFragment {
     public FatalityDialogFragment() {
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_fatality_dialog, container, false);
     }
-
 }

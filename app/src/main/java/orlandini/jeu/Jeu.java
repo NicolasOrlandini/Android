@@ -21,7 +21,7 @@ import android.view.View;
  * @version 2016.0.44
  *
  * Date de création : 04/11/2016
- * Dernière modification : 04/11/2016
+ * Dernière modification : 07/09/2017
  */
 
 public class Jeu extends View {
@@ -135,8 +135,8 @@ public class Jeu extends View {
         String topScore = MainActivity._scoreDataBase.getTopScore();
         canvas.drawText("Score : " + String.valueOf(score), 50, 50, paint);
         canvas.drawText("Meilleur score : " + String.valueOf(topScore), 50, 120, paint);
-        canvas.drawBitmap(bitmapTemps, screenWidth - 300, 0, null);
-        canvas.drawText(String.valueOf(GameActivity.getSecs()), screenWidth - 160, 80, paint);
+        canvas.drawBitmap(bitmapTemps, screenWidth - 360, 0, null);
+        canvas.drawText(String.valueOf(GameActivity.getSecs()) + " s", screenWidth - 150, 110, paint);
     }
 
     /**

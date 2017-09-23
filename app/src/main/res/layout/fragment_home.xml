@@ -20,7 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:typeface="normal"
-        app:font="BTTF.ttf"
+        app:customFont="BTTF.ttf"
         android:layout_marginTop="50dp"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"

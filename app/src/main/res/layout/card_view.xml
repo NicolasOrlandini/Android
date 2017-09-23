@@ -35,7 +35,7 @@
             android:textStyle="normal|bold"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
             android:paddingStart="50dp"
-            app:font="BTTF.ttf"/>
+            app:customFont="BTTF.ttf"/>
 
     </RelativeLayout>
 </android.support.v7.widget.CardView>
