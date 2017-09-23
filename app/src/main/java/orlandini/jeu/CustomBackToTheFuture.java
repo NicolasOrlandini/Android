@@ -5,10 +5,13 @@ import android.content.res.TypedArray;
 import android.graphics.Typeface;
 import android.util.AttributeSet;
 import android.util.Log;
-import android.widget.TextView;
 
 /**
- * Created by Singu_Admin on 29/10/2016.
+ * @author Nicolas Orlandini & Valentin Leon
+ * @version 2016.0.2
+ *
+ * Date de création : 29/10/2016
+ * Dernière modification : 23/09/2017
  */
 
 /**

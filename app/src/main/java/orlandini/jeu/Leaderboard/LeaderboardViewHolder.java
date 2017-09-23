@@ -10,10 +10,10 @@ import orlandini.jeu.R;
 
 /**
  * @author Valentin Leon
- * @version 2016.0.10
+ * @version 2016.0.11
  *
  * Date de création : 29/10/2016
- * Dernière modification : 03/11/2016
+ * Dernière modification : 23/09/2017
  */
 
 public class LeaderboardViewHolder extends RecyclerView.ViewHolder {
@@ -25,9 +25,9 @@ public class LeaderboardViewHolder extends RecyclerView.ViewHolder {
     public LeaderboardViewHolder(View itemView) {
         super(itemView);
 
-        mTextViewView = (orlandini.jeu.CustomBackToTheFuture) itemView.findViewById(R.id.myscore);
-        mImageView = (ImageView) itemView.findViewById(R.id.picture);
-        mCardView = (CardView) itemView.findViewById(R.id.card_view);
+        mTextViewView =  itemView.findViewById(R.id.myscore);
+        mImageView = itemView.findViewById(R.id.picture);
+        mCardView = itemView.findViewById(R.id.card_view);
     }
 
     public CardView getmCardView() {

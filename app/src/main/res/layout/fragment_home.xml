@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="30dp"
         android:contentDescription="@string/description_logo" />
 
     <orlandini.jeu.CustomBackToTheFuture
@@ -21,47 +21,48 @@
         android:layout_height="wrap_content"
         android:typeface="normal"
         app:customFont="BTTF.ttf"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="normal|bold"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="30sp"
         android:layout_below="@+id/homeLogo"
         android:layout_centerHorizontal="true" />
 
     <Button
         android:id="@+id/btnJouer"
         android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:onClick="jouer"
         android:drawableStart="@drawable/fleche"
-        android:height="90dp"
-        android:layout_below="@+id/Accueil_nom_joueur"
-        android:textSize="40sp"
+        android:height="0dp"
+        android:textSize="35sp"
         android:text="@string/description_btn_jouer"
         android:textStyle="bold"
         android:textColor="@android:color/white"
-        android:padding="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_centerHorizontal="true"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_margin="20dp"
+        android:layout_centerVertical="true"
         android:background="@drawable/ripple_effect"
-        />
+        android:layout_below="@+id/Accueil_nom_joueur"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:id="@+id/btnBonus"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:drawableEnd="@drawable/delorean_menu_home"
-        android:height="90dp"
+        android:height="92dp"
         android:layout_below="@+id/btnJouer"
         android:textSize="20sp"
         android:text="@string/text_button_niveau_bonus"
         android:onClick="easterEgg"
         android:textStyle="bold"
         android:textColor="@android:color/white"
-        android:padding="2dp"
-        android:layout_marginTop="20dp"
+        android:padding="20dp"
+        android:layout_margin="20dp"
         android:layout_centerHorizontal="true"
         android:background="@drawable/ripple_effect"
         />
-
-
 </RelativeLayout>
