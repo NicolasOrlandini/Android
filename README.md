@@ -1,6 +1,8 @@
 # Projet Samaritan
 
-Projet Samaritan en Java LPSIL DAM - 2016
+Projet Samaritan en Java ANDROID - LPSIL DAM
+
+2016 - 2017
 
 version 1.0.3
 
@@ -9,20 +11,30 @@ version 1.0.3
 
 ## Description
 
-Le projet présenté est une application de jeu, réalisé en natif Android (Java), consistant à tapoter sur un personnage le plus de fois possible dans un lapse de temps défini. Dans le but de marquer le plus de points possibles.
-Le jeu peut être personnalisé, notamment le personnage, mais aussi les sons lorsque l'on perd, gagne ou encore lorsque l'on tapote sur le personnage.
-Il est possible de visualiser ses scores dans un tableau de score, nommé Leaderboard, dans le hamburger menu se situant à gauche.
+Le projet Samaritan est un jeu réalisé en natif Android (Java) dans le cadre de ma licence professionnelle et en cours d’amélioration. Le jeu consiste à tapoter sur un personnage le plus de fois possible dans un laps de temps défini. Dans le but de marquer le plus de points possible. Le personnage apparaît à des endroits aléatoires, plus ou moins rapidement. Le jeu peut être personnalisé, notamment l'apparence du personnage, mais aussi les sons lorsque l’on perd, gagne ou encore lorsque l’on tapote sur le personnage. Il est possible de visualiser ses scores dans un tableau de score, accessible depuis le menu hamburger se situant à gauche.
 
-## Informations
+## Fonctionnalités
 
-* utilisation de Git, pour le versionning de l'application, cependant en version gratuite.
-* possibilité de sauvegarder ses scores en local, via SQLite
+* Niveau bonus inédit
+* Le scores est sauvegardé à chaque fin de partie
 * personnalisation des préférences du jeu
   - la vitesse de déplacement du personnage
   - le/les son(s) de l'application en elle-même
   - activer ou non la vibration
   - activer ou non le son
-* de nouvelles fonctionnalités sont en cours de développement, elles sont stockées dans les issues, afin de nous en servir de to do et de garder une trace de ce que nous voulons faire par la suite.
+  - Le nom du joueur
+  - Le thème de l'application (Orange Halloween ou bleu)
+* de nouvelles fonctionnalités sont en cours de développement
+
+## Points techniques
+
+- Fragments et activités
+- Ressources audio
+- Hamburger menu
+- Base de données locale SQLite
+- Utilisation des SharedPreferences
+- Utilisation des canvas
+- utilisation de Git, pour le versionning de l'application
 
 -----------------
 
@@ -65,6 +77,13 @@ Le projet a été conçu à l'aide de la méthode Agile, qui nous permet de voir
 * [x] Sprite pour faire bouger le personnage en jeu
 * [x] Sortie de la version 1.0
 * [x] Ajout de commentaires explicatifs finaux
+
+## Spécifications techniques
+
+* IDE requis : Android Studio
+* Langage de programmation : Android (JAVA)
+* Orientation du terminal : Portrait
+* Version minimum supportée : Android 4.4 KitKat 
 
 ## Contributeurs
 
